@@ -1,0 +1,10 @@
+#!/usr/bin/osascript
+on run argv
+	activate application "iTerm"
+	tell application "iTerm"
+		tell current session of current window
+			set cmd to item 1 of argv
+			write text cmd
+		end tell
+	end tell
+end run
